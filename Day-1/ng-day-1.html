@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <title>Web Bhumi</title>
+    <script src="../js/angular.min.js" charset="utf-8"></script>
+  </head>
+  <body >
+      <div class="" ng-app="myModule">
+      <div class="" ng-controller=myController>
+        <input type="text" name="" value="" ng-model="name">
+        {{name}}
+        </br>
+        Number:-{{number}}
+      </div>
+
+    <div class="" ng-controller="webbhumiController">
+      <input type="text" name="" value="" ng-model="name">
+      {{name}}
+      </br>
+      Number:-{{number}}
+    </div>
+      </div>
+  </body>
+<script type="text/javascript">
+  var webbhumi=angular.module("myModule",[]);
+  webbhumi.controller("myController",function ($scope) {
+    $scope.name="Web Bhumi";
+    $scope.number=9999999999;
+  });
+  webbhumi.controller("webbhumiController",function ($scope) {
+    $scope.name="Mayank";
+  })
+</script>
+</html>
