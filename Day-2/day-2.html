@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web Bhumi</title>
+    <script src="../js/angular.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="" ng-app="myModule">
+        <div class="" ng-controller="nameController">
+          Name:-{{name}}<br>
+          Number:-{{number}}
+        </div>
+<hr>
+        <div class="" ng-controller="numberController">
+          Name:-{{name}}<br>
+          Number:-{{number}}
+        </div>
+<hr>
+<div class="" ng-controller="numberController">
+  <input type="text" name="" value="" ng-model="name" placeholder="name">
+  <input type="text" name="" value="" ng-model="number" placeholder="number">
+  <div class="" ng-controller="nameController">
+    Name:-{{name}}<br>
+    Number:-{{number}}
+      <input type="text" name="" value="" ng-model="name" placeholder="name">
+      <input type="text" name="" value="" ng-model="number" placeholder="number">
+  </div>
+
+</div>
+    </div>
+  </body>
+
+<script type="text/javascript">
+var app=  angular.module("myModule",[]);
+var nameControllerFunction=function ($scope) {
+  $scope.name="Shubham";
+}
+app.controller("nameController",nameControllerFunction);
+
+app.controller("numberController",function ($scope) {
+  $scope.number="8109191885";
+  $scope.name="Nidhi";
+});
+
+
+</script>
+</html>
