@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web Bhumi</title>
+     <script src="../js/angular.min.js" charset="utf-8"></script>
+    <script src="bookang.js" charset="utf-8"></script>
+    <style media="screen">
+      .box{
+        display: inline-block;
+        width :30%;
+        border: 1px solid black;
+        padding: 5px;
+        border-collapse: collapse;
+        margin: 15px;
+        box-shadow: 0px 0px 5px 2px #ccc; 
+        overflow:hidden;
+        }
+    </style>
+  </head>
+  <body>
+      <div class="" ng-app="myModule">
+          <div class="" ng-controller="myController as databook">
+                <div class="box" ng-repeat="book in databook.books">
+                  <p>ID:- {{book.ID}}</p>
+                  <p>Title:- {{book.Title}}</p>
+                  <p>Description:- {{book.Description}}</p> 
+                  <p>Image:- {{book.Image}}</p>
+                  <p>isbn:- {{book.isbn}}</p>            
+                </div>
+          </div>
+      </div>
+  </body>
+</html>
