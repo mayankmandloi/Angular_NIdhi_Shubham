@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Web Bhumi</title>
+  <script src="../js/angular.min.js" charset="utf-8"></script>
+  <script src="Day-6.js" charset="utf-8"></script>
+</head>
+<body>
+  <div class="" ng-app="myApp">
+    <div class="" ng-controller="myController as TI">
+    <!-- <input type="text" name="" value="" ng-model="orderText"> -->
+      <table>
+        <thead>
+          <tr>
+            <th ng-click="TI.sortByMe('Name')">Name</th>
+            <th ng-click="TI.sortByMe('Match')">Match</th>
+            <th ng-click="TI.sortByMe('Runs')">Runs</th>
+            <th ng-click="TI.sortByMe('Highest')">Highest</th>
+            <th ng-click="TI.sortByMe('hun')">100s</th>
+            <th ng-click="TI.sortByMe('fif')">50s</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="khiladi in TI.KhiladiLog|orderBy:orderText">
+            <td>{{khiladi.Name}}</td>
+            <td>{{khiladi.Match}}</td>
+            <td>{{khiladi.Runs}}</td>
+            <td>{{khiladi.Highest}}</td>
+            <td>{{khiladi.hun}}</td>
+            <td>{{khiladi.fif}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
