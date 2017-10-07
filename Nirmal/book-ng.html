@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>ng-book</title>
+	<script src="../js/angular.min.js"></script>
+	<script src="book.js"></script>.
+	<style>
+	.ng-box{
+		border:1px solid #868686;
+		width:30%;
+		box-shadow:5px 3px #ccc;
+		display: inline-block;
+		margin:10px;
+		padding: 10px;
+	}
+	</style>
+</head>
+<body>
+
+	<div class="" ng-app="myModule">
+		<div class="" ng-controller="mycontroller as yourbook">
+			<div class="ng-box" ng-repeat="book in yourbook.books">
+				<p>ID-{{book.ID}}</p>
+				<p>Title-{{book.Title}}</p>
+				<p>Description-{{book.Description}}</p>
+				<p><img ng-src="{{book.Image}}"></p>
+			</div>
+		</div>
+		
+	</div>
+
+</body>
+</html>
