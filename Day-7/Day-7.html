@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web Bhumi</title>
+    <script src="../js/angular.min.js" charset="utf-8"></script>
+    <script src="Day-7.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="" ng-app="checkFilterModule">
+      <div class="" ng-controller="forCurrencyController as fcc">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Fine</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="fineFee in fcc.lateFee">
+              <td>{{fineFee.name}}</td>
+              <td>{{fineFee.fee|currency:'Rs'}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
