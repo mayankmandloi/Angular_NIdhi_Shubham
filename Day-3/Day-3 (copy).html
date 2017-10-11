@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Web Bhumi</title>
+  <script src="../js/angular.min.js" charset="utf-8"></script>
+  <script src="Day-3.js" charset="utf-8"></script>
+
+</head>
+<body>
+  <div class="" ng-app="myModule">
+    <div class="" ng-controller="nidhiController as nidhi">
+      <h3>Name:-{{nidhi.person.name}}</h3>
+      <h3>Email:-{{nidhi.person.email}}</h3>
+    </div>
+
+    <div class="" ng-controller="shubhamController as shubham">
+      <h3>Name:-{{shubham.person.name}}</h3>
+      <h3>Email:-{{shubham.person.email}}</h3>
+    </div>
+
+    <div class="" ng-controller="nidhiController as nidhi">
+      <div class="" ng-controller="shubhamController as nirmal">
+        <h3>Name:-{{nidhi.person.name}}</h3>
+        <h3>Email:-{{nirmal.person.email}}</h3>
+      </div>
+    </div>
+
+    <div class="" ng-controller="shubhamController as shubham">
+
+      <input type="text" ng-model="shubham.person.name">
+
+      <div class="" ng-controller="shubhamController as nirmal">
+        <input type="text" ng-model="shubham.person.name">
+         <input type="text" ng-model="nirmal.person.name">
+      </div>
+    </div>
+
+
+  </div>
+</body>
+</html>
