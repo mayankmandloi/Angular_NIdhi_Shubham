@@ -24,12 +24,12 @@ angular.module("myApp").controller("myController",function($scope) {
 
 
    this.sortByMe=function (byMe) {
-     if($scope.orderText==byMe)
+     if($scope.orderText==byMe)//orderText= name , byMe = Match
       {
       $scope.orderText="-"+byMe;
       }
       else {
-        $scope.orderText=byMe;
+          $scope.orderText=byMe;
       }
    }
 })

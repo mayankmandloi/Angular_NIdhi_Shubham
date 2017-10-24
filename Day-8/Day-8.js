@@ -1,4 +1,4 @@
-angular.module("myModule",[]);
+var app=angular.module("myModule",[]);
 angular.module("myModule").controller("myController",function ($scope) {
   $scope.bheed=[{name:"nidhi",Rnum:001},{name:"shubham",Rnum:002},{name:"shivam",Rnum:007},{name:"suraj",Rnum:008}]
 });
@@ -10,8 +10,8 @@ angular.module("myModule").filter("countchar",function () {
 });
 
 
-
-angular.module("myModule").filter("firstcaps",function () {
+app.filter("firstcaps",function () {
+//angular.module("myModule").filter("firstcaps",function () {
   return function (item) {
     var first= item[0];
     var rest=item.slice(1);
@@ -29,10 +29,10 @@ angular.module("myModule").filter("firstcaps",function () {
       return 20;
     }
   else if (item=="mayank") {
-    return 20;
+    return 30;
   }
 else if (item=="shivam") {
-  return 0;
+  return 100;
 }
 else {
   return 0
