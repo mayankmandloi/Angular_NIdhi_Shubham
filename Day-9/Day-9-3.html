@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Web Bhumi</title>
+  <script src="../js/angular.min.js" charset="utf-8"></script>
+</head>
+<body ng-app="myModule" >
+  <div class="" ng-controller="myController as myc">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Roll Number</th>
+          <th>show/hide</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="bachha in myc.bheed">
+          <td>
+                <span ng-hide="bachha.tt">{{bachha.name}}</span>
+                <input ng-show="bachha.tt" type="text" name="" value="" ng-model="bachha.name">
+          </td>
+          <td>{{bachha.Rnum}}</td>
+          <td>
+          <span ng-hide="bachha.tt" ng-click="bachha.tt=true">Edit</span><span ng-show="bachha.tt" ng-click="bachha.tt=false">Save</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+<input type="text" ng-model="myc.nayaAadmi.name">
+<input type="text" ng-model="myc.nayaAadmi.Rnum">
+{{myc.nayaAadmi}}
+<button type="button" name="button" ng-click="myc.addToArray(name,Rnum)" >Add</button>
+  </div>
+</body>
+
+<script>
+  var app=  angular.module("myModule",[]);
+  app.controller("myController",function(){
+    var that=this;
+    this.bheed=[{name:"nidhi",Rnum:001},{name:"shubham",Rnum:002},{name:"shivam",Rnum:007},{name:"suraj",Rnum:008}];
+
+this.addToArray=function(name,Rnum){
+that.bheed.push(that.nayaAadmi);
+}
+  });
+</script>
+
+
+
+</html>
