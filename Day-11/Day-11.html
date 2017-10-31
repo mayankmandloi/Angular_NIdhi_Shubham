@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web Bhumi</title>
+  </head>
+  <body>
+    <div class="" ng-app="myModule">
+      <div class="" ng-controller="myController as myc">
+        {{myc.name}}
+        <div class="" ng-controller="myController as myc1">
+            {{myc1.name}}    
+        </div>
+      </div>
+      <div class="" ng-controller="myController as myc">
+              {{myc.name}}
+      </div>
+      <div class="" ng-controller="myController as myc">
+              {{myc.name}}
+      </div>
+      <div class="" ng-controller="myController1 as myc">
+              {{myc.name}}
+      </div>
+    </div>
+  </body>
+<script src="../js/angular.min.js" charset="utf-8"></script>
+<script>
+
+angular.module("myModule",[]);
+angular.module("myModule").controller("myController",function(){
+this.name="Mayank";
+});
+angular.module("myModule").controller("myController1",function(){
+this.name="Shubham";
+})
+
+</script>
+</html>

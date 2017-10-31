@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web Bhumi</title>
+    <script src="../js/angular.min.js" charset="utf-8"></script>
+    
+  </head>
+  <body>
+    <div class="" ng-app="myModule">
+      <webbhumi></webbhumi>
+      <div class="webbhumi"></div>
+        <div webbhumi=""></div>
+       <!-- directive:webbhumi -->
+    </div>
+  </body>
+<script>
+var app= angular.module("myModule",[]);
+app.directive("webbhumi",function(){
+return{
+template:"<h1>Hello I am from Web Bhumi</h1>",
+restrict:'ACEM',
+replace:true
+
+};
+});
+</script>
+</html>
