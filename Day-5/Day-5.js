@@ -8,6 +8,9 @@ angular.module("myModule").controller("myController",function () {
   {name:"Nidhi",number:1234567,email:"nidhi@webbhumi.com"},
   {name:"Pratibha",number:23423423,email:"shubham@webbhumi.com"},
   {name:"Brijesh",number:1234455,email:"shivam@webbhumi.com"},
-  {name:"Mayank",number:187654,email:"neha@webbhumi.com"}];
+  {name:"Mayank",number:187654,email:"neha@webbhumi.com"}
+
+  ];
     this.bheed=persons;
 });
+
