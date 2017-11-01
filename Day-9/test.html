@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web Bhumi</title>
+  </head>
+  <body>
+
+  </body>
+<script>
+  var shubham={name:"Shubham",number:"001",address:"Indore"};
+  console.log(shubham);
+//this function is used to create object;
+function Person(name,number,address)
+{
+this.name=name;
+this.number=number;
+this.address=address;
+}
+  var Shivam= new Person("Shivam","002","L.I.G.");
+  console.log(Shivam);
+
+  var name=window.prompt("Enter name");
+  var number=window.prompt("Enter number");
+  var address=window.prompt("Enter address");
+
+  var p1= new Person(name,number,address);
+console.log(p1);
+
+</script>
+</html>
