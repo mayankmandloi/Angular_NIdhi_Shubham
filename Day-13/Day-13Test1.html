@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Bhumi</title>
+</head>
+<body>
+    <div ng-app="myModule">
+        <div ng-controller="mainController">
+            <person-detail pp="shubham"></person-detail>
+            <person-detail pp="nidhi"></person-detail>
+        </div>
+    </div>
+</body>
+<script src="../js/angular.min.js"></script>
+<script>
+    angular.module("myModule",[]);
+    angular.module("myModule").directive("personDetail",function(){
+        return {
+        template:"<h1>Hello I am {{person.name}} and  my UID is {{person.number}}</h1>",
+        scope:{person:"=pp"}
+    }
+    });
+
+    
+    angular.module("myModule").controller("mainController",function($scope){
+        $scope.nidhi={name:"Nidhi",number:"007"};
+        $scope.shubham={name:"Shubham",number:"006"};
+    })
+</script>
+</html>
