@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Bhumi</title>
+</head>
+<body ng-app="mymodule">
+    <div ng-controller="personData">
+        <div ng-repeat="employee in persons">
+            <show-Details student="employee"></show-Details>
+        </div>
+
+        <show-name name="Mayank"></show-name>
+    </div>
+</body>
+<script src="../js/angular.min.js"></script>
+<script>
+    angular.module("mymodule",[]);
+    angular.module("mymodule").controller("personData",function ($scope) {
+        $scope.persons=[{name:"mayank",number:9425319399,address:"Sudama Nagar Indore"},
+
+        {name:"Nidhi",number:9407411992,address:"Shubh Labh avenue Indore"},
+        
+        {name:"Shubham",number:8109191885,address:"Tilak nagar Indore"}];
+    });
+
+    angular.module("mymodule").directive("showDetails",function(){
+        return {
+            template:"<p>Hello I am {{student}}</p>",
+            scope:{
+                student:"@"
+            }
+        }
+    });
+
+    angular.module("mymodule").directive("showName",function(){
+        return {
+            template:"<p>My name is {{name}}</p>",
+            scope:{
+                name:"="
+            }
+        }
+    });
+</script>
+</html>
