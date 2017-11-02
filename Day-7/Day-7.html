@@ -17,7 +17,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr ng-repeat="fineFee in fcc.lateFee">
+            <tr ng-repeat="fineFee in fcc.lateFee|orderby">
               <td>{{fineFee.name}}</td>
               <td>{{fineFee.fee|currency:'Rs'}}</td>
             </tr>

@@ -4,11 +4,11 @@ angular.module("myModule").controller("myController",function ($scope) {
 });
 
 angular.module("myModule").filter("countchar",function () {
-  return function (item) {
+  return function (item){
     return item.length;
   }
 });
-
+ 
 
 app.filter("firstcaps",function () {
 //angular.module("myModule").filter("firstcaps",function () {

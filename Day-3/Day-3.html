@@ -5,10 +5,10 @@
   <title>Web Bhumi</title>
   <script src="../js/angular.min.js" charset="utf-8"></script>
   <script src="Day-3.js" charset="utf-8"></script>
-
 </head>
 <body>
-  <div class="" ng-app="myModule">
+	
+  <!-- <div class="" ng-app="myModule">
     <div class="" ng-controller="nidhiController as nidhi">
       <h3>Name:-{{nidhi.person.name}}</h3>
       <h3>Email:-{{nidhi.person.email}}</h3>
@@ -25,7 +25,23 @@
         <h3>Email:-{{nirmal.person.email}}</h3>
       </div>
     </div>
-
-  </div>
+  </div> -->
+  <div class="" ng-app="myModule">
+    <div class="" ng-controller="shubhamController as shubham">
+      	<p>{{shubham.person.name}}</p>	
+		<p>{{shubham.person.email}}</p>
+		<p>{{shubham.person.mo}}</p>	
+		<p>{{shubham.person.address}}</p>
+    </div>
+</div>
 </body>
+<script type="text/javascript">
+	angular.module("myModule",[]);
+	angular.module("myModule").controller("shubhamController",function(){
+		this.person={name:"shubh",email:"snirmal763@gmail.com",mo:"81091919885",address:"Tilak Nagar indore"}
+	});
+	angular.module("myModule").controller("employes",function(){
+		this.person={name:"abc",email:"abc@gmail.com",Mo:"123456",address:"indore"}
+	});
+</script>
 </html>

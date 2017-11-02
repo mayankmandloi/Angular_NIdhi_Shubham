@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -45,3 +46,27 @@
     });
 </script>
 </html>
+=======
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web Bhumi</title>
+  </head>
+  <body>
+    <div class="" ng-app="bookModule">
+      <div class="" ng-controller="bookListController as booklist">
+        <div class="" ng-repeat="kitabe in booklist.Book" style="float:left;width:30%">
+          <book-preview book="kitabe"></book-preview>
+        </div>
+        <div class="" ng-repeat="pustak in booklist.Book" style="float:left;width:30%">
+          <book-preview book="pustak"></book-preview>
+        </div>
+      </div>
+    </div>
+  </body>
+
+<script src="../js/angular.min.js" charset="utf-8"></script>
+<script src="bookData.js" charset="utf-8"></script>
+<script src="script.js" charset="utf-8"></script>
+</html>
+>>>>>>> 3ceede1ae72ce673ea473d19c479f756384926a2
