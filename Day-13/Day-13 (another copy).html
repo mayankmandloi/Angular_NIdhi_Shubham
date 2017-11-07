@@ -9,10 +9,12 @@
 <body ng-app="mymodule">
     <div ng-controller="personData">
         <div ng-repeat="employee in persons">
-            <show-Details student="employee"></show-Details>
+            <show-Details name="employee.name" num="employee.number" add="employee.address"></show-Details>
+
         </div>
 
-        <show-name name="Mayank"></show-name>
+        <show-name name="Nirmal"></show-name>
+        
     </div>
 </body>
 <script src="../js/angular.min.js"></script>
@@ -28,9 +30,11 @@
 
     angular.module("mymodule").directive("showDetails",function(){
         return {
-            template:"<p>Hello I am {{student}}</p>",
+            template:"<p>Hello I am {{student}} my number is {{number}} I live at {{address}}</p>",
             scope:{
-                student:"@"
+                student:"=name",
+                number:"=num",
+                address:"=add"
             }
         }
     });
@@ -39,7 +43,7 @@
         return {
             template:"<p>My name is {{name}}</p>",
             scope:{
-                name:"="
+                name:"@"
             }
         }
     });
