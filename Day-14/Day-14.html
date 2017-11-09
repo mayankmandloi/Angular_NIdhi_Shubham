@@ -16,7 +16,7 @@
     <div ng-controller="myController">
         <h1>One Way</h1>
         <input type="text" name="" id="" ng-model="name">
-        <one-way na='name' ></one-way>
+        <one-way name='name' ></one-way>
     </div>
 </body>
 <script src="../js/angular.min.js"></script>
@@ -40,7 +40,7 @@
         return {
             template:"<input type='text' ng-model='name'>",
             scope:{
-                name:"<na"
+                name:"<name"
             }
         }
     })
