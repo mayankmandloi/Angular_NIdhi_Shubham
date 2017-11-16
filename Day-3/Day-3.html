@@ -5,6 +5,11 @@
   <title>Web Bhumi</title>
   <script src="../js/angular.min.js" charset="utf-8"></script>
   <script src="Day-3.js" charset="utf-8"></script>
+  <style>
+  p{
+  	display: inline-block;
+  }
+  </style>
 </head>
 <body>
 	
@@ -31,9 +36,15 @@
       	<p>{{shubham.person.name}}</p>	
 		<p>{{shubham.person.email}}</p>
 		<p>{{shubham.person.mo}}</p>	
-		<p>{{shubham.person.address}}</p>
+		<p>{{shubham.person.address}}</p> 
     </div>
-</div>
+    <div class="" ng-controller="employes as emp">
+    	<p>{{emp.person.name}}</p>
+    	<p>{{emp.person.email}}</p>
+    	<p>{{emp.person.mo}}</p>
+    	<p>{{emp.person.address}}</p>
+    		</div>
+		</div>
 </body>
 <script type="text/javascript">
 	angular.module("myModule",[]);

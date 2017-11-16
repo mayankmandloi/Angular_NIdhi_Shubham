@@ -9,3 +9,13 @@ angular.module("myModule").controller("myController",function () {
   {name:"Shivam",number:420420,email:"shivam@webbhumi.com"},
   {name:"Neha",number:100100,email:"neha@webbhumi.com"}];
 });
+
+
+
+angular.module("myModule",[]);
+angular.module("myModule").controller("myController";function(){
+	this.persons=[{name:"s"; number:"123"},
+	{name:"s",shubh:"123"};
+
+	];
+});
