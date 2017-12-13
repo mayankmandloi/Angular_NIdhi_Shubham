@@ -12,10 +12,10 @@ angular.module("myModule").controller("myController",function () {
 
 
 
-angular.module("myModule",[]);
-angular.module("myModule").controller("myController";function(){
-	this.persons=[{name:"s"; number:"123"},
-	{name:"s",shubh:"123"};
+// angular.module("myModule",[]);
+// angular.module("myModule").controller("myController";function(){
+// 	this.persons=[{name:"s"; number:"123"},
+// 	{name:"s",shubh:"123"};
 
-	];
-});
+// 	];
+// });
