@@ -1,0 +1,27 @@
+<html>
+	<head>
+		<title>NIRMAL</title>
+		<script type="text/javascript">
+		function chnage_write (){
+			var username = document.getElementById('username').value;
+			var password = document.getElementById('password').value;
+			if (username == "" || password==""){
+				alert("please fill in all fields");
+				//return true;
+					return false;
+			}
+			else {
+				//return false;
+				return true;
+			}
+		}
+		</script>
+	</head>
+	<body>
+		<form action="submit.html" method="post" onsubmit="return chnage_write()">
+			username:<input type="text" id="username">
+			password:<input type="password" id="password" maxlength="5">
+			<button type="submit">login</button>
+		</form>
+	</body>
+</html>
