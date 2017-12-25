@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Bhumi</title>
+</head>
+<body>
+    <div ng-app="myModule">
+        <div ng-controller="myController as myc">
+            {{name}}</br>
+            <div ng-controller="yourController as yc">
+                {{yc.name}} & {{myc.name}} {{name}}
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="../js/angular.min.js"></script>
+<script>
+(function(angular){
+angular.module("myModule",[]);
+
+angular.module("myModule").controller("myController",function($scope){
+    //$scope.name="Mayank";
+    $scope.number=34566543;
+    this.name="Mayank";
+});
+angular.module("myModule").controller("yourController",function($scope){
+    //$scope.name="Shubham";
+    this.name="Shubham";
+});
+
+})(window.angular);
+</script>
+</html>

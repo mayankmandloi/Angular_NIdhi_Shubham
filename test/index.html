@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body ng-app="sourabhModule">
+    <div>
+        <input type="text" name="" id="" ng-model="name">
+        <h1>{{name|uppercase}}</h1>
+
+    </div>
+
+    <div ng-controller="mayankControler">
+            <h1>{{name}}</h1>
+            {{2+3}}
+    
+        </div>
+    
+</body>
+<script src="../js/angular.min.js"></script>
+<script>
+    var app=angular.module("sourabhModule",[]);
+    app.controller("shubhamControler",function($scope){
+        $scope.name="Sourabh";
+    });
+    app.controller("mayankControler",function($scope){
+        $scope.name="Shubham";
+    });
+</script>
+
+</html>

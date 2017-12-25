@@ -9,23 +9,23 @@
    <p>
   	BY default only first ng-app will work next will not work without manual bootstraping
 	</p>
-  	<div class="" ng-app="myModule">
+  	<!-- <div class="" ng-app="myModule">
   		<div class="" ng-controller="myController">
   			<input type="text" name="" value="" ng-modal="name">
   			{{name}}<br>{{number}}
   		</div>
-  	</div>
+  	</div> -->
 
       <div class="" ng-app="myModule">
         <div class="" ng-controller=myController>
-          <input type="text" name="" value="" ng-modal="name">
+          <input type="text" name="" value="" ng-model="name">
           {{name}}
           </br>
           Number:-{{number}}
         </div>
 
     <div class="" ng-controller="webbhumiController">
-      <input type="text" name="" value="" ng-modal="name">
+      <input type="text" name="" value="" ng-model="name">
       {{name}}
       </br>
       Number:-{{number}}
@@ -42,4 +42,5 @@
     $scope.name="Mayank";
   })
 </script>
+
 </html>

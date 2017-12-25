@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Bhumi</title>
+</head>
+<body>
+    <div ng-app="contactListApp">
+        <div ng-controller="actualList as al">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="contact in al.contactList">
+                            <td>{{contact.name}}</td>
+                            <td>{{contact.number}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <label>Name <input type="text" ng-model="name" placeholder="name"></label>
+                <label><input type="text" ng-model="number" placeholder="number"></label>
+                <button ng-click="al.addContact(name,number)">Add</button>
+        </div>
+    </div>
+</body>
+<script src="../js/angular.min.js"></script>
+<script>
+    (function(ang){
+        ang.module("contactListApp",[]);
+        ang.module("contactListApp").controller("actualList",function(){
+            var self=this; // object
+            self.contactList=[];// array  
+            function addCon(name,number)
+            {
+                console.log(name);
+                var newPerson=new Object();
+                newPerson.name=name;
+                newPerson.number=number;
+                self.contactList.push(newPerson); 
+            }
+            self.addContact=addCon;
+
+        });
+
+    })(window.angular);
+</script>
+</html>
